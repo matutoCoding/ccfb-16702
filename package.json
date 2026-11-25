@@ -1,0 +1,22 @@
+{
+  "name": "rti-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "浏览器端 RTI 多光源拟合与重光照系统 (TypeScript + WebGPU + IndexedDB)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "accept": "tsx scripts/acceptance.ts",
+    "check:modules": "tsx scripts/export-check.ts && tsx scripts/alignment-check.ts && tsx scripts/sphere-check.ts && tsx scripts/rust-check.ts",
+    "accept:720": "tsx scripts/acceptance.ts --size 720"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.7",
+    "@webgpu/types": "^0.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3",
+    "vite": "^7.0.0"
+  }
+}
